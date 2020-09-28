@@ -15,4 +15,4 @@ Greetings from Germany to all Capitalists around the World! What a nice World we
 
 Works fine with FivePD! FiveM Install: Copy AIBackup folder into your resources folder
 
-Its a simple Script to call AI Backup to help you out. It is still in early early alhpa Commands: /AIBackup - to call backup, /getout - get the Cops out of their car, /cb - cancel backup
+Its a simple Script to call AI Backup to help you out. It is still in early early alhpa Commands: /aib - to call backup, /getout - get the Cops out of their car, /cb - cancel backup
