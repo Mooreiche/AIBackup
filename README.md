@@ -4,7 +4,7 @@
 This is my first GTA Script/Mod i did myself. Like the Scripts/Mods i publish for other Games you can edit, reupload, fix, delete, sniff, smoke or what ever you want with this script. Just do not delete anyone out of the credits and add your name to it!
 
 ## WHAT IT DOES
-Its a simple Script to call AI Backup to help you out. It is still in early early alpha
+Its a simple Script to call AI Police Backup to help you out. It is still in early early alpha
 
 ## CREDITS 
 
