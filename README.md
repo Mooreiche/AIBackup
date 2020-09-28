@@ -19,6 +19,10 @@ Works fine with FivePD! FiveM Install: Copy AIBackup folder into your resources 
 
 Its a simple Script to call AI Backup to help you out. It is still in early early alhpa.
 
+## KEYBINDS  
+- `Num+` - to call backup.
+- `Num-` - to cancel backup.
+
 ## COMMANDS 
 
 - `/aib` - to call backup.
