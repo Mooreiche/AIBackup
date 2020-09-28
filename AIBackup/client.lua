@@ -31,19 +31,11 @@ policeman=GetHashKey("s_m_y_cop_01")
 companyName = "Dispatch"
 companyIcon = "CHAR_CALL911"
 
-nearesthospital=nil
 
 -- spawning events --
 
 RegisterNetEvent('POL:Spawn')
-RegisterNetEvent('Coroner:Spawn')
 
--- report progress events --
-
-RegisterNetEvent('EMS:Half')
-RegisterNetEvent('Coroner:Half')
-RegisterNetEvent('EMS:Arrived')
-RegisterNetEvent('Coroner:Arrived')
 
 -- spawning events handlers --
 
@@ -80,6 +72,8 @@ AddEventHandler('POL:Spawn', function(target)
 	passenger_ped = CreatePedInsideVehicle(vehicle ,6 , policeman, 0, true, true)
 	GiveWeaponToPed(driver_ped, GetHashKey("WEAPON_COMBATPISTOL"), math.random(20, 100), false, true)
 	GiveWeaponToPed(passenger_ped, GetHashKey("WEAPON_PUMPSHOTGUN"), math.random(20, 100), false, true)
+	SetPedArmour(driver_ped, math.random(50, 100))
+	SetPedArmour(passenger_ped, math.random(50, 100))
 	
     vehBlip = AddBlipForEntity(vehicle)
 	SetBlipSprite (vehBlip,3)
@@ -143,7 +137,7 @@ RegisterCommand("CB", function()
   
     local target = PlayerPedId()
     if target~=nil then
-    LeaveScene(vehicle, driver_ped, passenger_ped)
+	LeaveScene(vehicle, driver_ped, passenger_ped)
 	SetVehicleSiren(vehicle, false)
 	ShowAdvancedNotification(companyIcon, companyName, "Panic Button", "Backup Dispatch has been cancelled.")
     end
@@ -179,11 +173,6 @@ function LeaveScene(vehicle, driver_ped, passenger_ped)
 	SetPedAsNoLongerNeeded(passenger_ped)
 	SetVehicleSiren(vehicle, false)
 	RemoveBlip(vehBlip)
-end
-
-function LeaveVehicle(vehicle, driver_ped, passenger_ped)
-	TaskLeaveAnyVehicle(driver_ped, vehicle, 1)
-	TaskLeaveAnyVehicle(passenger_ped, vehicle, 1)
 end
 
 -- Notifications --
