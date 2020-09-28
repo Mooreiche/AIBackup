@@ -36,6 +36,26 @@ companyIcon = "CHAR_CALL911"
 
 RegisterNetEvent('POL:Spawn')
 
+-- keybinds --
+Citizen.CreateThread(function()
+local target = PlayerPedId()	
+    while true do 		
+        Citizen.Wait(0) 		
+        if IsControlJustPressed(1, 314) --[[ Num+ ]] then 
+		TriggerEvent('POL:Spawn', target)
+        end 	
+    end 
+end)
+
+Citizen.CreateThread(function()
+local target = PlayerPedId()	
+    while true do 		
+        Citizen.Wait(0) 		
+        if IsControlJustPressed(1, 315) --[[ Num- ]] then 
+		LeaveScene(vehicle, driver_ped, passenger_ped)
+        end 	
+    end 
+end)
 
 -- spawning events handlers --
 
@@ -55,26 +75,28 @@ AddEventHandler('POL:Spawn', function(target)
     local heading, spawn = GetNthClosestVehicleNodeFavourDirection(offset.x, offset.y, offset.z, pc.x, pc.y, pc.z, 50, 1, 0x40400000, 0)
     local vehicle = CreateVehicle(police, spawn.x, spawn.y, spawn.z, heading, true, false)
     
+    driver_ped = CreatePedInsideVehicle(vehicle ,6 , policeman, -1, true, true)
+	passenger_ped = CreatePedInsideVehicle(vehicle ,6 , policeman, 0, true, true)
+	GiveWeaponToPed(Driver_ped, GetHashKey("WEAPON_COMBATPISTOL"), math.random(20, 100), false, true) -- Fahrer/Driver/YYY
+	GiveWeaponToPed(Passenger_ped, GetHashKey("WEAPON_PUMPSHOTGUN"), math.random(20, 100), false, true) -- Beifahrer/Passenger/XXX
+    SetEntityAsMissionEntity(Driver_ped, false, false)
+	SetEntityAsMissionEntity(Passenger_ped, false, false)
+    SetEntityAsMissionEntity(vehicle, false, false)
+	
 	-- AI BACKUP Settings --
 	playerGroupId = GetPedGroupIndex(player)
     SetPedAsGroupMember(driver_ped, playerGroupId) -- Fahrer/Driver/YYY
 	SetPedAsGroupMember(passenger_ped, playerGroupId) -- Beifahrer/Passenger/XXX
+	
     NetworkRequestControlOfEntity(driver_ped) -- Fahrer/Driver/YYY
 	NetworkRequestControlOfEntity(passenger_ped) -- Beifahrer/Passenger/XXX
     ClearPedTasksImmediately(driver_ped) -- Fahrer/Driver/YYY
 	ClearPedTasksImmediately(passenger_ped) -- Beifahrer/Passenger/XXX
     AddRelationshipGroup("POL8")
     SetRelationshipBetweenGroups(0, GetHashKey("POL8"), GetHashKey("PLAYER"))
-    SetPedRelationshipGroupHash(driver_ped, GetHashKey("POL8")) -- Fahrer/Driver/YYY
-	SetPedRelationshipGroupHash(passenger_ped, GetHashKey("POL8")) -- Beifahrer/Passenger/XXX
-	
-    driver_ped = CreatePedInsideVehicle(vehicle ,6 , policeman, -1, true, true)
-	passenger_ped = CreatePedInsideVehicle(vehicle ,6 , policeman, 0, true, true)
-	GiveWeaponToPed(driver_ped, GetHashKey("WEAPON_COMBATPISTOL"), math.random(20, 100), false, true)
-	GiveWeaponToPed(passenger_ped, GetHashKey("WEAPON_PUMPSHOTGUN"), math.random(20, 100), false, true)
-	SetPedArmour(driver_ped, math.random(50, 100))
-	SetPedArmour(passenger_ped, math.random(50, 100))
-	
+    SetPedRelationshipGroupHash(driver_ped, GetHashKey("POL8"))
+    SetPedRelationshipGroupHash(passenger_ped, GetHashKey("POL8"))	
+
     vehBlip = AddBlipForEntity(vehicle)
 	SetBlipSprite (vehBlip,3)
 	
@@ -114,7 +136,7 @@ AddEventHandler('POL:Spawn', function(target)
       TaskLeaveVehicle(passenger_ped, vehicle, 0)
       while IsPedInAnyVehicle(passenger_ped, false) do
         Wait(1)
-    end	
+    end		
 	
 end)
     
@@ -139,7 +161,6 @@ RegisterCommand("CB", function()
     if target~=nil then
 	LeaveScene(vehicle, driver_ped, passenger_ped)
 	SetVehicleSiren(vehicle, false)
-	ShowAdvancedNotification(companyIcon, companyName, "Panic Button", "Backup Dispatch has been cancelled.")
     end
 	
 end, false)
@@ -159,6 +180,7 @@ end, false)
 
 -- functions --
 function LeaveScene(vehicle, driver_ped, passenger_ped)
+	ShowAdvancedNotification(companyIcon, companyName, "Panic Button", "Backup Dispatch has been cancelled.")
 	TaskEnterVehicle(passenger_ped, vehicle, 1000, 0, 20, 1, 0)
 	while GetIsTaskActive(passenger_ped, 160) do
     Wait(1)
