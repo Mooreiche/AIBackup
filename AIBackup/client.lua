@@ -91,7 +91,7 @@ AddEventHandler('POL:Spawn', function(target)
 	while GetIsTaskActive(passenger_ped, 160) do
     Wait(1)
     end
-    TaskVehicleDriveToCoordLongrange(driver_ped, vehicle, pc.x, pc.y, pc.z, 15.0, 537133612, 15.0)
+    TaskVehicleDriveToCoordLongrange(driver_ped, vehicle, pc.x, pc.y, pc.z, 15.0, 537133628, 15.0)
 	ShowAdvancedNotification(companyIcon, companyName, "Panic Button", "Your Panic Button was triggered. A CODE3 Unit has been dispatched to your location.")
     local arrived = false
     while not arrived do
