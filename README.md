@@ -3,6 +3,9 @@
 
 This is my first GTA Script/Mod i did myself. Like the Scripts/Mods i publish for other Games you can edit, reupload, fix, delete, sniff, smoke or what ever you want with this script. Just do not delete anyone out of the credits and add your name to it!
 
+## WHAT IT DOES
+Its a simple Script to call AI Backup to help you out. It is still in early early alpha
+
 ## CREDITS 
 
 (IceHax) - for publishing an incomplete amublance script on cfx.re which gave me the idea and basic structure to create this script
@@ -17,7 +20,6 @@ Greetings from Germany to all Capitalists around the World! What a nice World we
 
 Works fine with FivePD! FiveM Install: Copy AIBackup folder into your resources folder
 
-Its a simple Script to call AI Backup to help you out. It is still in early early alpha
 
 ## KEYBINDS  
 - `Num+` - to call backup
