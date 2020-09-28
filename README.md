@@ -17,7 +17,7 @@ Greetings from Germany to all Capitalists around the World! What a nice World we
 
 Works fine with FivePD! FiveM Install: Copy AIBackup folder into your resources folder
 
-Its a simple Script to call AI Backup to help you out. It is still in early early alhpa.
+Its a simple Script to call AI Backup to help you out. It is still in early early alpha.
 
 ## KEYBINDS  
 - `Num+` - to call backup.
