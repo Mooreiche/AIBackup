@@ -36,16 +36,26 @@ companyIcon = "CHAR_CALL911"
 
 RegisterNetEvent('POL:Spawn')
 
+local playerPed = nil
+local playerSpawned = false
+
+AddEventHandler("playerSpawned", function()
+    playerPed = PlayerPedId()
+    playerSpawned = true
+end)
+
 -- keybinds --
 Citizen.CreateThread(function()
-local target = PlayerPedId()	
     while true do 		
-        Citizen.Wait(0) 		
-        if IsControlJustPressed(1, 314) --[[ Num+ ]] then 
-		TriggerEvent('POL:Spawn', target)
-        end 	
+        Citizen.Wait(0)
+        if playerSpawned then
+            if IsControlJustPressed(1, 314) --[[ Num+ ]] then 
+                TriggerEvent('POL:Spawn', playerPed)
+            end 	
+       end
     end 
 end)
+
 
 Citizen.CreateThread(function()
 local target = PlayerPedId()	
