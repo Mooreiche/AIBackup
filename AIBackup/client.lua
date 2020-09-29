@@ -77,10 +77,10 @@ AddEventHandler('POL:Spawn', function(target)
     
     driver_ped = CreatePedInsideVehicle(vehicle ,6 , policeman, -1, true, true)
 	passenger_ped = CreatePedInsideVehicle(vehicle ,6 , policeman, 0, true, true)
-	GiveWeaponToPed(Driver_ped, GetHashKey("WEAPON_COMBATPISTOL"), math.random(20, 100), false, true) -- Fahrer/Driver/YYY
-	GiveWeaponToPed(Passenger_ped, GetHashKey("WEAPON_PUMPSHOTGUN"), math.random(20, 100), false, true) -- Beifahrer/Passenger/XXX
-    SetEntityAsMissionEntity(Driver_ped, false, false)
-	SetEntityAsMissionEntity(Passenger_ped, false, false)
+	GiveWeaponToPed(driver_ped, GetHashKey("WEAPON_COMBATPISTOL"), math.random(20, 100), false, true) -- Fahrer/Driver/YYY
+	GiveWeaponToPed(passenger_ped, GetHashKey("WEAPON_PUMPSHOTGUN"), math.random(20, 100), false, true) -- Beifahrer/Passenger/XXX
+    SetEntityAsMissionEntity(driver_ped, false, false)
+	SetEntityAsMissionEntity(passenger_ped, false, false)
     SetEntityAsMissionEntity(vehicle, false, false)
 	
 	-- AI BACKUP Settings --
