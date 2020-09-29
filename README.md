@@ -3,6 +3,10 @@
 
 This is my first GTA Script/Mod i did myself. Like the Scripts/Mods i publish for other Games you can edit, reupload, fix, delete, sniff, smoke or what ever you want with this script. Just do not delete anyone out of the credits and add your name to it!
 
+# !!!IMPORTANT!!!
+ITS EARLY ALPHA AND A BIT BUGGY YOU NEED TO RESTART THE RESOURCE (restart AIBackup) FOR IT TO FUNCTION.
+Its probably because of the GetPlayerId() cause the script loads before the Player is joined. If you know how to fix please make a Contribution.
+
 ## WHAT IT DOES
 Its a simple Script to call AI Police Backup to help you out. It is still in early early alpha
 
