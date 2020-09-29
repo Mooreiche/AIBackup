@@ -6,7 +6,8 @@ This is my first GTA Script/Mod i did myself. Like the Scripts/Mods i publish fo
 # !!!IMPORTANT!!!
 ~~ITS EARLY ALPHA AND A BIT BUGGY YOU NEED TO RESTART THE RESOURCE (restart AIBackup) FOR IT TO FUNCTION CORRECTLY.
 Its probably because of the GetPlayerId() cause the script loads before the Player is joined. If you know how to fix please let me know or/and make a Contribution.~~
-       Fixed by Mobius01 - Thank you so much!!
+
+Fixed by Mobius01 - Thank you so much!!
 
 ## WHAT IT DOES
 Its a simple Script to call AI Police Backup to help you out. It is still in early early alpha
