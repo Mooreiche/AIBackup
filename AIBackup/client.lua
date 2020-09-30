@@ -208,20 +208,22 @@ function LeaveVehicle()
 end
 
 function LeaveScene()
-    ShowAdvancedNotification(companyIcon, companyName, "Panic Button", "Backup Dispatch has been cancelled.")
+    if active then
+        ShowAdvancedNotification(companyIcon, companyName, "Panic Button", "Backup Dispatch has been cancelled.")
 
-    EnterVehicle()
+        EnterVehicle()
 
-    TaskVehicleDriveWander(driver_ped, vehicle, 17.0, drivingStyle)
-    SetEntityAsNoLongerNeeded(vehicle)
-    SetPedAsNoLongerNeeded(driver_ped)
-    SetPedAsNoLongerNeeded(passenger_ped)
-    SetVehicleSiren(vehicle, false)
-    RemoveBlip(vehBlip)
+        TaskVehicleDriveWander(driver_ped, vehicle, 17.0, drivingStyle)
+        SetEntityAsNoLongerNeeded(vehicle)
+        SetPedAsNoLongerNeeded(driver_ped)
+        SetPedAsNoLongerNeeded(passenger_ped)
+        SetVehicleSiren(vehicle, false)
+        RemoveBlip(vehBlip)
 
-    -- reset --
-    active        = false
-    arrived       = false
+        -- reset --
+        active        = false
+        arrived       = false
+    end
 end
 
 -- Notifications --
