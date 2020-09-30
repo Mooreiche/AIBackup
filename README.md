@@ -4,7 +4,7 @@
 This is my first GTA Script/Mod i did myself. Like the Scripts/Mods i publish for other Games you can edit, reupload, fix, delete, sniff, smoke or what ever you want with this script. Just do not delete anyone out of the credits and add your name to it!
 
 # !!!IMPORTANT KNOWN ISSUES!!!
-- When you joined the Server the first Backup call will spawn only the Vehicle and no NPC which basicly makes it useless. You need to Cancel it (Num- or /cb) and call another one. This will function as intended.
+- ~~When you joined the Server the first Backup call will spawn only the Vehicle and no NPC which basicly makes it useless. You need to Cancel it (Num- or /cb) and call another one. This will function as intended.~~
 
 
 
