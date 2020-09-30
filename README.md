@@ -6,11 +6,11 @@ This is my first GTA Script/Mod i did myself. Like the Scripts/Mods i publish fo
 # !!!IMPORTANT KNOWN ISSUES!!!
 - ~~When you joined the Server the first Backup call will spawn only the Vehicle and no NPC which basicly makes it useless. You need to Cancel it (Num- or /cb) and call another one. This will function as intended.~~
 
-
-
 - ~~ITS EARLY ALPHA AND A BIT BUGGY YOU NEED TO RESTART THE RESOURCE (restart AIBackup) FOR IT TO FUNCTION CORRECTLY. Its probably because of the GetPlayerId() cause the script loads before the Player is joined. If you know how to fix please let me know or/and make a Contribution.~~ 
 
-Fixed by Mobius01 - Thank you so much!!
+Fixed by Mobius1 - Thank you so much!!
+
+- Mobius1 added a few bugfixes, however, SetPedAsGroupMember() is glitchy causing driver_ped and / or passenger_ped to sometimes not be in the player's group.
 
 ## WHAT IT DOES
 Its a simple Script to call AI Police Backup to help you out. It is still in early early alpha
@@ -21,7 +21,7 @@ Its a simple Script to call AI Police Backup to help you out. It is still in ear
 
 (Mooreiche) - Me/Original Uploader, Greetings from Germany to all Capitalists around the World! What a nice World well live in! 
 
-(Mobius01) - for fixing bugs and saving me alot of headache
+(Mobius1) - huge thanks for fixing bugs and saving me alot of headache!
 
 
 
