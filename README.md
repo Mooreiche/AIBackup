@@ -10,7 +10,7 @@ This is my first GTA Script/Mod i did myself. Like the Scripts/Mods i publish fo
 
 Fixed by Mobius1 - Thank you so much!!
 
-- Mobius1 added a few bugfixes, however, SetPedAsGroupMember() is glitchy causing driver_ped and / or passenger_ped to sometimes not be in the player's group.
+- few bugfixes were added, however, SetPedAsGroupMember() is glitchy causing driver_ped and / or passenger_ped to sometimes not be in the player's group.
 
 ## WHAT IT DOES
 Its a simple Script to call AI Police Backup to help you out. It is still in early early alpha
