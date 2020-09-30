@@ -10,7 +10,7 @@ DO NOT DELETE ANYONE OUT OF THE CREDITS JUST ADD YOUR NAME TO IT!!!			DO NOT DEL
     CREDITS:
     (IceHax) - for publishing an incomplete amublance script on cfx.re which gave me the idea and basic structure to create this script
     Mooreiche - Me/Original Uploader
-	
+    Mobius1 - huge thanks for fixing bugs and saving me alot of headache!
 	
 	
 	
