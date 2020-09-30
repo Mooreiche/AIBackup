@@ -29,7 +29,7 @@ Its a simple Script to call AI Police Backup to help you out. It is still in ear
 
 ## INSTALL 
 
-Works fine with FivePD! FiveM Install: Copy AIBackup folder into your resources folder
+Works fine with FivePD! FiveM Install: Copy AIBackup folder into your resources folder, rembember to edit the server.cfg (ensure AIBackup or start AIBackup)
 
 
 ## KEYBINDS  
