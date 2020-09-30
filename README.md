@@ -21,7 +21,7 @@ Its a simple Script to call AI Police Backup to help you out. It is still in ear
 
 (Mooreiche) - Me/Original Uploader, Greetings from Germany to all Capitalists around the World! What a nice World well live in! 
 
-(Mobius01) - for fixing minor bugs and saving me alot of headache
+(Mobius01) - for fixing bugs and saving me alot of headache
 
 
 
