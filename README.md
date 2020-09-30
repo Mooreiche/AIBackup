@@ -19,11 +19,11 @@ Its a simple Script to call AI Police Backup to help you out. It is still in ear
 
 (IceHax) - for publishing an incomplete amublance script on cfx.re which gave me the idea and basic structure to create this script
 
-(Mooreiche) - Me/Original Uploader
+(Mooreiche) - Me/Original Uploader, Greetings from Germany to all Capitalists around the World! What a nice World well live in! 
 
 (Mobius01) - for fixing minor bugs and saving me alot of headache
 
-Greetings from Germany to all Capitalists around the World! What a nice World well live in! 
+
 
 **!REMEMBER TO FIGHT AGAINST COMMUNISM!**
 
