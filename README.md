@@ -3,13 +3,13 @@
 
 This is my first GTA Script/Mod i did myself. Like the Scripts/Mods i publish for other Games you can edit, reupload, fix, delete, sniff, smoke or what ever you want with this script. Just do not delete anyone out of the credits and add your name to it!
 
-# !!!IMPORTANT KNOWN BUGS!!!
+# !!!IMPORTANT KNOWN ISSUES!!!
+When you joined the Server the first Backup call will spawn only the Vehicle and no NPC which basicly makes it useless. You need to Cancel it (Num- or /cb) and call another one. This will function as intended.
+
 ~~ITS EARLY ALPHA AND A BIT BUGGY YOU NEED TO RESTART THE RESOURCE (restart AIBackup) FOR IT TO FUNCTION CORRECTLY.
 Its probably because of the GetPlayerId() cause the script loads before the Player is joined. If you know how to fix please let me know or/and make a Contribution.~~
 
 Fixed by Mobius01 - Thank you so much!!
-
-When you joined the Server the first Backup call will spawn only the Vehicle and no NPC which basicly makes it useless. You need to Cancel it (Num- or /cb) and call another one. This will function as intended.
 
 ## WHAT IT DOES
 Its a simple Script to call AI Police Backup to help you out. It is still in early early alpha
