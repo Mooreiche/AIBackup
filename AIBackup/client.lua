@@ -213,7 +213,7 @@ function LeaveScene()
 
         EnterVehicle()
 
-        TaskVehicleDriveWander(driver_ped, vehicle, 17.0, drivingStyle)
+        TaskVehicleDriveWander(driver_ped, vehicle, 17.0, 262315)
         SetEntityAsNoLongerNeeded(vehicle)
         SetPedAsNoLongerNeeded(driver_ped)
         SetPedAsNoLongerNeeded(passenger_ped)
